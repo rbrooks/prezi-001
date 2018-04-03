@@ -1,49 +1,755 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <title>Prezi: The Path to Langri-La</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>The Path to Langri-La</h1>
+                <h3>The Quest for Language Enlightenment</h3>
+                <p>
+                    <small>by: <a href="http://www.russbrooks.com">&#8220;Rust&#8221; Brooks</a></small>
+                </p>
+            </section>
+
+            <section>
+                <h2>Background</h2>
+                <ul>
+                    <li><strong>Python</strong>: 2 yrs</li>
+                    <li><strong>Ruby</strong>: 8 yrs</li>
+                    <li><strong>PHP</strong>: 5 yrs</li>
+                    <li><strong>C#</strong>: 5 yrs - <em>Compiled</em></li>
+                    <li><strong>JavaScript</strong>: 18 yrs</li>
+                    <li><strong>VBScript</strong>: 3 yrs</li>
+                    <li><strong>Fortran &amp; Turbo Pascal</strong> - <em>Compiled</em></li>
+                    <li><strong>BASIC</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Two Language Families</h2>
+                <ul>
+                    <li><strong>Scripting</strong>: &#8220;Interpreted&#8221;</li>
+                    <li><strong>Compiled</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Scripting</h2>
+                <ul>
+                    <li><strong>Interpreted at Runtime</strong></li>
+                    <li><strong>Single-Threaded</strong></li>
+                    <li><strong>Dynamic Typing</strong></li>
+                    <li><strong>High Level</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Scripting</h2>
+                <h3>Benefits</h3>
+                <ul>
+                    <li><strong>Quicker time to market.</strong> Gap is narrowing.</li>
+                    <li><strong>Shallower learning curve</strong></li>
+                    <li><strong>Debugging on Production can be easier.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Scripting</h2>
+                <h3>Drawbacks</h3>
+                <section>
+                    <ul>
+                        <li><strong>Slow</strong></li>
+                        <li><strong>Low Scalability</strong></li>
+                        <li><strong>Cost</strong>: Programs don’t run faster after upgrades</li>
+                        <li><strong>Require a runtime process in which to run</strong>: interpreter / VM</li>
+                        <li><strong>Processes eternally grow in RAM</strong></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li><strong>Highly Mutable</strong></li>
+                        <li><strong>Unsafe</strong>: Side Effects</li>
+                        <li><strong>Green Threads</strong>: Use a single CPU core. Threads are virtual. Overhead.</li>
+                        <li><strong>Require larger Test Suites</strong> to cover for lack of compile-time checks.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>From Ruby Core Team</h2>
+
+                <p>They had just denied a Web-related optimization request, and replied something to the effect:
+                </p>
+
+                <blockquote>
+                    &#8220;Ruby is glue language, intended to string together batch operations from Shell. Like Python and Perl, It was never designed for large-scale, multi-user Web applications.&#8221;
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Apt Use Cases for Scripting Languages</h2>
+
+                <ul>
+                    <li><strong>Prototyping</strong>: Projects you aren’t certain are going to succeed. You need to get some MVP quickly to market.</li>
+                    <li><strong>Non-Production (Intranet sites)</strong>: Cost of runtime error is low.</li>
+                    <li><strong>One-Person Shops</strong></li>
+                    <li><strong>Batch Jobs</strong>: Provisioning tools, backups, log analysis, etc.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Poor Use Cases for Scripting Languages</h2>
+
+                <ul>
+                    <li><strong>Large-scale, multi-user applications</strong></li>
+                    <li><strong>Desktop Apps</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>What consistutes &#8220;Fun&#8221; in a language?</h3>
+
+                <ul>
+                    <li><strong>Programmer Aids</strong> - Memory Mgmnt, Good Tooling</li>
+                    <li><strong>Expressiveness</strong></li>
+                    <li><strong>Low Surprise</strong></li>
+                    <li><strong>Nice Semantics and Syntax</strong></li>
+                    <li><strong>Safety</strong>: against Bugs</li>
+                    <li><strong>Flexibility</strong></li>
+                    <li><strong>Productive</strong></li>
+                    <li><strong>Generic</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Scripting-Language Fundex</h2>
+
+                <ul>
+                    <li><strong>PERL</strong> - It's PERL. Fun: 2/10</li>
+                    <li><strong>PHP</strong> - Quirk-laiden. Fun: 3/10</li>
+                    <li><strong>Python</strong> - No more performant than Ruby, and not as elastic, nor as uniform. Fun: 7/10</li>
+                    <li><strong>JavaScript</strong> - Rush job. Written in 2 weeks. Target audience: non-programmers (HTML authors).
+                        <ul>
+                            <li><strong>Client-Side Fun:</strong> 3/10</li>
+                            <li><strong>Server-Side Fun:</strong> 5/10</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Ruby</h2>
+                <h3>Fundex: 10/10</h3>
+
+                <ul>
+                    <li><strong>Principal of Least Surprise</strong>: Centered entirely around the Programmer</li>
+                    <li><strong>Inspired these awesome new languages:</strong>
+                        <ul>
+                            <li><strong>Elixir</strong></li>
+                            <li><strong>Go</strong></li>
+                            <li><strong>Kotlin</strong></li>
+                            <li><strong>Rust</strong></li>
+                            <li><strong>Swift</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Compiled</h2>
+
+                <ul>
+                    <li><strong>Multi-Threaded</strong></li>
+                    <li><strong>Mid-to-Low Level</strong></li>
+                    <li><strong>Static Typing</strong></li>
+                    <li><strong>Speed</strong></li>
+                    <li><strong>Native Binaries</strong> - Unless Java or C#</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Apt Use Cases for Compiled Languages</h2>
+
+                <ul>
+                    <li><strong>Large-scale Web applications</strong></li>
+                    <li><strong>Desktop Apps</strong></li>
+                    <li><strong>+ Pretty much anything Scripting Languages can do.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Poor Use Cases for Compiled</h2>
+
+                <ul>
+                    <li><strong>Batch Scripts</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Why Static Types?</h2>
+
+                <ul>
+                    <li>A &#8220;Type&#8221; (Binary Numbers) exists at the lowest level, not matter what you do.</li>
+                    <li>Languages that manage Types for you are doing so at a performance penalty.</li>
+                    <li>You are declaring more of your intent to the machine, so the machine can do more work on your behalf.</li>
+                </ul>
+            </section>
+
+            <section>
+                <section id="fragments">
+                    <h3>&#8220;But, Russ, Static Typing is more 'work' for the programmer, and more work is less fun.&#8221;</h3>
+
+                    <h3 class="fragment"><strong>Solution:</strong> Type Inferance</h3>
+                    <ul>
+                        <li class="fragment">Dynamic feel</li>
+                        <li class="fragment">Performance of Static</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>Compiled-Language Fundex</h2>
+
+                <ul>
+                    <li><strong>C</strong> - Safety & threading issues. Frequently exploited. Fun: 2/10</li>
+                    <li><strong>C++</strong> - Threading is hard. Exploited. Fun: 3/10</li>
+                    <li><strong>Java</strong> - Fun: 5/10</li>
+                    <li><strong>C#</strong> - Fun: 5/10</li>
+                    <li><strong>Scala</strong> - Fun: 7/10</li>
+                    <li><strong>Elixir</strong> - Fun: 8/10</li>
+                    <li><strong>Go</strong> - Fun: 9/10</li>
+                    <li><strong>Rust</strong> - Fun: 10/10</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Functional</h2>
+                <h3>Benefits</h3>
+
+                <ul>
+                    <li><strong>Immutable</strong></li>
+                    <li><strong>Scales</strong></li>
+                    <li><strong>Little-to-No Shared State</strong></li>
+                    <li><strong>Strong Type, Concurrency, and Memory safety</strong> in Pure Func.</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Functional</h2>
+                    <h3>Drawbacks</h3>
+                    <ul>
+                        <li><strong>Low Maintainability</strong></li>
+                    </ul>
+
+                    <pre><code class="haskell" data-trim contenteditable>
+sort arr left right = when (left < right) $ do
+  pivot <- read right
+  loop pivot left (right - 1) (left - 1) right
+  where
+    read = readArray arr
+    sw = swap arr
+    find n pred i = bool (find n pred (n i)) (return i) . pred i =<< read i
+    move op d i pivot = bool (return op)
+                        (sw (d op) i >> return (d op)) =<<
+                        liftM (/=pivot) (read i)
+    swapRange px x nx y ny = if px x then sw x y >> swapRange px (nx x) nx (ny y) ny else return y
+    loop pivot oi oj op oq = do
+      i <- find (+1) (const (<pivot)) oi
+      j <- find (subtract 1) (\idx cell -> cell>pivot && idx/=left) oj
+      if i < j
+        then do
+          sw i j
+          p <- move op (+1) i pivot
+          q <- move oq (subtract 1) j pivot
+          loop pivot (i + 1) (j - 1) p q
+        else do
+          sw i right
+          nj <- swapRange (<op) left (+1) (i-1) (subtract 1)
+          ni <- swapRange (>oq) (right-1) (subtract 1) (i+1) (+1)
+          let thresh = 1024000
+              strat = if nj - left < thresh || right - ni < thresh
+                      then (>>)
+                      else parallel
+          sort arr left nj `strat` sort arr ni right
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Functional</h2>
+                    <h3>Drawbacks</h3>
+
+                    <ul>
+                        <li><strong>&#8220;Great for Parallelism. Bad for Performance.&#8221;</strong></li>
+                        <li><strong>Some familiar data structures don't exist in Pure Functional:</strong> Hash Table</li>
+                        <li><strong>No Concurrent Collections in PF</strong></li>
+                        <li><strong>No Unsorted Dictionary or Set in PF</strong></li>
+                        <li><strong>Graph Algorithms Slow in PF</strong></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>Reasons to Opt for Scripting</h2>
+                <h3>perpetuated 13 years ago when Scripting languages resurged:</h3>
+
+                <ul>
+                    <li>&#8220;Machines are cheap enough now.&#8221;</li>
+                    <li>&#8220;Compilation slows development.&#8221;</li>
+                    <li>&#8220;There's no REPL.&#8221;</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Software Engineer</h2>
+
+                <p>Wikipedia:</p>
+
+                <ul>
+                    <li>&#8220;Uses sound engineering principals...&#8221;</li>
+                    <li>&#8220;...creates software that is reliable and <strong><em>works efficiently</em></strong> on real machines.&#8221;</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Compilation Slows Development</h2>
+
+                <ul>
+                    <li>Pretty much a non-issue these days.</li>
+                    <li>IDE auto-recompiles in the background.</li>
+                    <li>IDE only recompiles the file (Module) you're working on.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>REPL's</h2>
+
+                <ul>
+                    <li><strong>Exist in <a href="https://www.google.com/search?q=go+repl">Go</a> and <a href="https://www.google.com/search?q=rust+repl">Rust</a>.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Why Language Geek? 🤓</h2>
+
+                <ul>
+                    <li><strong>Fun</strong></li>
+                    <li><strong>Levels You Up:</strong> Increased market value.</li>
+                    <li>Teaches you new things about Programming.</li>
+                    <li>Sometimes changes the way you think about Programming.</li>
+                    <li>You learn things about the <strong><em>current language</em></strong> you use daily.</li>
+                    <li>It's nice to have Compiled and Scripting skills in your tool belt.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>CPU's</h2>
+
+                <ul>
+                    <li><strong>Limits of Physics</strong></li>
+                    <li><strong>Can't make Clock Speed faster.</strong></li>
+                    <li><strong>Can only add Cores.</strong></li>
+                    <li><strong>We must write code that distributes its load to all the Cores.</strong></li>
+                    <li><strong>Pro Tip:</strong> Scripting Languages don't.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>The 3 Safeties</h2>
+
+                <ul>
+                    <li><strong>Memory Safety</strong></li>
+                    <li><strong>Type Safety</strong></li>
+                    <li><strong>Concurrency Safety</strong></li>
+                </ul>
+
+                <p>
+                    Eiminate <em>whole classes</em> of bugs &#8220;by construction&#8221;. Increase reliability, security, and developer productivity.
+                </p>
+            </section>
+
+            <section>
+                <h2>Memory Safety</h2>
+
+                <ul>
+                    <li>Prohibits access to invalid regions of Memory.</li>
+                    <li>Flaws when violated: <a href="https://en.wikipedia.org/wiki/Buffer_overflow">Buffer Overflow</a>,
+                        <a href="https://www.webopedia.com/TERM/U/use-after-free.html">Use After Free</a>,
+                        <a href="https://www.owasp.org/index.php/Double_Free">Double Free's</a>.</li>
+                    <li>Critical problem that leads to exploits such as Injection Attacks.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Type Safety</h2>
+
+                <ul>
+                    <li>Prohibits use of Memory that is at odds with the Type allocated within that Memory.</li>
+                    <li>Flaws when violated: Type confusion, Casting errors, and uninitialized variables.</li>
+                    <li>Less severe than Memory-Safety holes.</li>
+                    <li>Leads to exploits.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Concurrency Safety</h2>
+
+                <ul>
+                    <li>Prohibits unsafe simultaneous use of shared Memory.</li>
+                    <li>Flaws when violated: <a href="https://en.wikipedia.org/wiki/Race_condition">data races</a>, or read-write, write-read, and write-write hazards</li>
+                    <li>Frequently lead to Type and Memory-safety violations.</li>
+                    <li>&#8220;Concurrency vulnerabilities are the 'next frontier' of exploitable security holes.&#8221;</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Google Go</h2>
+
+                <section>
+                    <ul>
+                        <li><strong>Creator:</strong> Ken Thompson. <em>Invented UNIX and B</em></li>
+                        <li><strong>Co-Creator:</strong> Rob Pike. Invented Plan-9 OS and UTF-8 charset.</li>
+                        <li>Dislike of C++'s complexity was their primary motivation.</li>
+                        <li><strong>Static Typed / Compiled</strong></li>
+                        <li><strong>Friendly, Terse Syntax</strong> - "Light on the Page"</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li><strong>Fast Compile Times</strong></li>
+                        <li><strong>Concurrency Primitives</strong>: Goroutines communicating over Channels.</li>
+                        <li><strong>Type Inferance</strong></li>
+                        <li><strong>OOP Lite: Favors Composition</strong></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>Mozilla Rust</h2>
+
+                <ul>
+                    <li>Creator: <strong>Graydon Hoare</strong>: On Swift team at Apple.</li>
+                    <li><strong>Blazing Fast</strong></li>
+                    <li><strong>Trait-Based OOP</strong></li>
+                    <li><strong>Zero-Cost Abstraction</strong></li>
+                    <li><strong>High Concurrency</strong></li>
+                    <li><strong>Centered Around Safety</strong></li>
+                    <li><strong>Low-Level Access and Speed / High-Level Feel</strong></li>
+                    <li><strong>Terse Syntax</strong></li>
+                    <li><strong>Expressive:</strong> Metapgrogramming via Macros, etc.</li>
+                    <li><strong>Best concepts from numerous languages</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>&#8220;The 3 Safeties&#8221; in Go</h2>
+
+                <ul>
+                    <li><strong>Memory Safety</strong>: Go’s is OK. 😡 Rust’s is significantly safer.</li>
+                    <li><strong>Type Safety</strong>: &#8220;Type Safety has always been a very contentious topic and Go maybe the first language to address this issue in 20 years, or since Algol.&#8221; --Bruce Eckel</li>
+                    <li><strong>Concurrency Safe</strong>: No restrictions on how Goroutines access shared data. You can cause data races in Go. 😡</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>&#8220;The 3 Safeties&#8221; in Rust</h2>
+
+                <ul>
+                    <li><strong>Bulletproof Memory Safety Without GC!</strong> Borrow and Ownership system</li>
+                    <ul>
+                        <li>Memory space is <strong><em>owned</em></strong> by variables.</li>
+                        <li>Temporarily <strong><em>borrowed</em></strong> by other variables.</li>
+                        <li>Dangling Pointers, Buffer Overruns, and Seg Faults do not exist in "safe" Rust. 🤯</li>
+                        <li>So good, it also allows you to safely share <strong><em>MUTABLE</em></strong> state. 🤯</li>
+                    </ul>
+                    <li><strong>Type Safety</strong>: Strong, Static, Immutable Types</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Rust: Concurrency</h2>
+                <ul>
+                    <li><strong>Threads</strong>: Bound to an OS thread.</li>
+                    <li><strong>Channels</strong>: Similar to Go</li>
+                    <li>Type System guarantees that concurrent code is free of data races. 🤯</li>
+                    <li>Catches any misuse of mutexes or other synchronization primitives at compile time.</li>
+                    <li>Async/Await-style coming in 2018</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <img width="800" data-src="/images/rust-allows.gif" alt="Rust Allows">
+                </section>
+                <section>
+                    <img width="800" data-src="/images/rust-allows2.gif" alt="Rust Allows">
+                </section>
+                <section>
+                    <img width="800" data-src="/images/rust-prevents.gif" alt="Rust Prevents">
+                </section>
+                <section>
+                    <img width="800" data-src="/images/rust-prevents2.gif" alt="Rust Prevents">
+                </section>
+            </section>
+
+            <section>
+                <h3>Rust: Type Inferance</h3>
+                <pre><code class="rust">
+fn main() {
+    let x: f64 = 2.0;    // Explicit type annotation
+    let y: u64 = 3;      // Explicit type annotation
+    let f: bool = false; // Explicit type annotation
+
+    // ^^^ Uneccessary. Can simply do:
+    let x = 2.0;        // f64
+    let y = 3;          // u64
+    let z = true;       // bool
+    // Rust determinnes which type to assign based on value on the right.
+}
+                </code></pre>
+            </section>
+
+            <section data-background="/images/tony_hoare.png">
+                <h2>Rust: No NULL! 🤯</h2>
+
+                <p><strong><em>&#8220;I call it my billion-dollar mistake.</em></strong> It was the invention of the NULL reference in 1965.&#8221; --Tony Hoare</p>
+
+                <p>&#8220;This has led to innumerable errors, vulnerabilities, and system
+                    crashes, which have probably caused a billion dollars of pain and
+                    damage in the last forty years.&#8221;</p>
+            </section>
+
+            <section>
+                <h2>Rust: No NULL!</h2>
+                <ul>
+                    <li>Flag something as &#8220;Optional&#8221; using the &#8220;Option&#8221; type.</li>
+                    <li>Compiler forces you to cover both code paths.</li>
+                </ul>
+                <pre><code class="rust">
+match result {
+    // Division was valid.
+    Some(x) => println!("Result: {}", x),
+    // Division was invalid
+    None => println!("Cannot divide by 0"),
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Rust: No Exceptions</h3>
+                <ul>
+                    <li>Errors are just values. Similar to Go.</li>
+                    <li>Specify that your function returns a "Result" type. Compiler
+                        forces you to cover the `Ok` and `Err` paths.</li>
+                </ul>
+                <pre><code class="rust">
+let version = parse_version(&[1, 2, 3, 4]);
+match version {
+    Ok(v) => println!("working with version: {:?}", v),
+    Err(e) => println!("error parsing header: {:?}", e),
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Rust: Trait-based OOP</h3>
+                <pre><code class="rust">
+trait Quack {
+    fn quack(&self);
+}
+
+struct Duck();
+
+impl Quack for Duck {
+    fn quack(&self) {
+        println!("quack!");
+    }
+}
+
+let duck = Duck();
+duck.quack();
+// quack!
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Go</h2>
+                <h3>Drawbacks</h3>
+                <ul>
+                    <li>Data Races</li>
+                    <li>No Generics</li>
+                    <li>Not the best candidate for Systems or OS Programming.</li>
+                    <li>&#8220;Sometimes Go is too simple.&#8221;</li>
+                    <li>&#8220;Tooling is weird.&#8221;</li>
+                    <li>&#8220;Tricky to learn.&#8221;</li>
+                    <li>&#8220;Difficult to handle errors.&#8221;</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Rust</h2>
+                <h3>Drawbacks</h3>
+                <ul>
+                    <li><strong>Learning Curve:</strong>
+                        <ul>
+                            <li>Learn Ruby, JS, or Python first.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Compile Time</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Rust: The Best Features From</h3>
+
+                <ul>
+                    <li><strong>Abstract Machine Model</strong>: C</li>
+                    <li><strong>Data types</strong>: C, SML, OCaml, Lisp, Limbo</li>
+                    <li><strong>Optional Bindings</strong>: Swift</li>
+                    <li><strong>Hygienic Macros</strong>: Scheme</li>
+                    <li><strong>Functional Programming</strong>: Haskell, OCaml, F#</li>
+                    <li><strong>Attributes</strong>: ECMA-335</li>
+                    <li><strong>Memory Model &amp; Management</strong>: C++, ML Kit, Cyclone</li>
+                    <li><strong>Type Classes</strong>: Haskell</li>
+                    <li><strong>Crate</strong>: Assembly in the ECMA-335 CLI model</li>
+                    <li><strong>Channels and Concurrency</strong>: Newsqueak, Alef, Limbo</li>
+                    <li><strong>Message passing and Thread failure</strong>: Erlang</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Rust</h2>
+
+                <img width="800" data-src="https://cdn-images-1.medium.com/max/1600/1*gX8C_mP0eETkwYjdCH16qQ.png" alt="Rust">
+            </section>
+
+            <section>
+                <h2>👍 Rust 👍</h2>
+                <p>
+                    The only language currently doing the 3 Safeties best, IMHO.
+                </p>
+            </section>
+
+            <section>
+                <h2>❤️ Rust ❤️</h2>
+                <p>
+                    Rust won 1st Place for &#8220;most loved programming language&#8221;
+                    in the Stack Overflow Developer Survey in 2016, 2017 and 2018.
+                </p>
+            </section>
+
+            <section>
+                <h2>🌈  Rust 🦄</h2>
+                <p>
+                    Rust code optimizes itself!
+                </p>
+                <p>🤣</p>
+            </section>
+
+            <section>
+                <h2>Be a Language Geek!</h2>
+                <ul>
+                    <li>If you can learn TypeScript, you can learn Rust!</li>
+                    <li>Get into Compiled languages.</li>
+                </ul>
+            </section>
+
+            <section>
+                <blockquote>
+                    &#8220;A language that doesn’t affect the way you think about programming, is not worth knowing.&#8221;
+                </blockquote>
+                — Alan Perlis
+            </section>
+
+            <section>
+                <section>
+                    <p>References</p>
+                    <ul>
+                        <li><a href="http://arthurtw.github.io/2014/12/21/rust-anti-sloppy-programming-language.html">Rust, an Anti-Sloppy Programming Language</a></li>
+                        <li><a href="https://medium.com/learning-rust/rust-basics-e73304ab35c7">Rust Basics</a></li>
+                        <li><a href="http://joeduffyblog.com/2015/11/03/a-tale-of-three-safeties/">The 3 Safeties</a></li>
+                        <li><a href="https://insanitybit.github.io/2016/12/28/golang-and-rustlang-memory-safety">Go and Rust Memory Safety</a></li>
+                        <li><a href="https://medium.com/@sargun/go-concurrency-considered-harmful-26499a422830">Go Concurrency Harmful</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Go Wikipedia page</a> - See &#8220;Suitability for parallel programming&#8221;, &#8220;lack of race condition safety&#8221;, &#8220;Omissions&#8221; and &#8220;Criticism&#8221;.</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>References</p>
+                    <ul>
+                        <li><a href="https://benchmarksgame.alioth.debian.org/u64q/compare.php?lang=rust&lang2=go">Rust vs Go Benchmarks</a> - Rust wins at fast.</li>
+                        <li><a href="https://jaxenter.com/disadvantages-of-purely-functional-programming-126776.html">Disadvantages of Pure Functional Programming</a></li>
+                        <li><a href="http://degoes.net/articles/fp-is-not-the-answer">FP Isn’t the Answer</a></li>
+                        <li><a href="https://queue.acm.org/detail.cfm?ref=rss&id=2611829">Most Functional Programs Do Not Work</a></li>
+                        <li><a href="http://www.oreilly.com/programming/free/files/why-rust.pdf">Why Rust?</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Software_engineering">Software Engineering</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h4>Learning</h4>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=EYqceb2AnkU&list=PLJbE2Yu2zumDF6BX6_RdPisRVHgzV02NW">31-part video dive into every feature of Rust</a> - Excellent. Then he takes you through building useful real-world projects with it.</li>
+                    <li><a href="https://newrustacean.com/">New Rustacean Podcast</a></li>
+                    <li><a href="https://rusty-spike.blubrry.net/">Rusty Spike Podcast</a></li>
+                    <li><a href="https://github.com/sger/RustBooks">Rust Books</a></li>
+                    <li><a href="https://github.com/ctjhoa/rust-learning">Rust Learning</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=-Tj8Q12DaEQ">Why is Rust Successful?</a> - YouTube</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
 </html>
